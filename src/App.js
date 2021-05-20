@@ -1,10 +1,15 @@
 import './App.css'
+import Lists from './components/Lists'
+import Title from './components/Title'
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1>Photo Wall</h1>
-    </div>
+    <>
+      <Title header={'Todos'} />
+      <Lists tasks={['Mow the yard', 'Clean the dishes', 'Wash the laundry']} />
+      <Lists tasks={['Cook dinner', 'Wash the car']} />
+      <Lists tasks={['Finish Homework', 'Take shower']} />
+    </>
   )
 }
 
