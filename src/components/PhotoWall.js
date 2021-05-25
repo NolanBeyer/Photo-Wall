@@ -1,11 +1,11 @@
 import React from 'react'
 import Photo from './Photo'
 
-const PhotoWall = ({ posts }) => {
+const PhotoWall = ({ posts, onRemovePhoto }) => {
   return (
     <div className='photo-grid'>
       {posts.map((post, index) => (
-        <Photo key={index} post={post} />
+        <Photo key={index} post={post} onRemovePhoto={onRemovePhoto} />
       ))}
     </div>
   )
