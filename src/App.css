@@ -208,3 +208,58 @@ button:focus,
   justify-content: center;
   font-size: 28pt;
 }
+
+.add-icon {
+  margin: 20px auto;
+  display: table;
+  padding: 40px;
+  background: url('https://image.flaticon.com/icons/svg/60/60740.svg');
+  background-size: contain;
+  border: none;
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 360px;
+  padding: 45px;
+}
+
+.form input {
+  font-family: sans-serif;
+  background: #f2f2f2;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 0 0 15px;
+  font-size: 14px;
+}
+
+.form button {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  background: #065784;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #7b8589;
+}
+
+button {
+  flex-basis: 40%;
+  color: red;
+  font-size: 15px;
+  border: 2px solid #f2f2f2;
+  line-height: 2;
+  padding: 5px;
+}
+
+button:hover {
+  border-color: blue;
+}
