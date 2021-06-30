@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import Title from './components/Title'
 import PhotoWall from './components/PhotoWall'
-import AddPhoto from './components/AddPhoto'
+// import AddPhoto from './components/AddPhoto'
 import { Route } from 'react-router-dom'
 
 class App extends Component {
@@ -18,11 +18,7 @@ class App extends Component {
           render={() => (
             <div>
               <Title title={'PhotoWall'} />
-              {/* <PhotoWall
-                posts={posts}
-                onRemovePhoto={this.removePhoto}
-                onNavigate={navigate}
-              /> */}
+              <PhotoWall posts={this.props.posts} />
             </div>
           )}
         />

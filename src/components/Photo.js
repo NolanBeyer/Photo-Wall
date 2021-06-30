@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 const Photo = (props) => {
   const post = props.post
@@ -19,5 +20,10 @@ const Photo = (props) => {
     </figure>
   )
 }
+function mapStateToProps(state) {
+  return {
+    posts: state,
+  }
+}
 
-export default Photo
+export default connect(mapStateToProps)(Photo)
