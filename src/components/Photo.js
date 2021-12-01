@@ -1,22 +1,21 @@
 import React from 'react'
 
-const Photo = (props) => {
-  const post = props.post
+const Photo = ({ post }) => {
   return (
     <figure className='figure'>
-      <img class='photo' src={post.imageLink} alt={post.description} />
-      <figureCaption>
+      <img className='photo' src={post.imageLink} alt={post.description} />
+      <figcaption>
         <p>{post.description}</p>
         <div className='button-container'>
           <button
-            class='remove-button'
+            className='remove-button'
             onClick={() => {
-              props.onRemovePhoto(post)
+              post.onRemovePhoto(post)
             }}>
             Remove
           </button>
         </div>
-      </figureCaption>
+      </figcaption>
     </figure>
   )
 }
