@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Photo = ({ post }) => {
+const Photo = ({ post, onRemovePhoto }) => {
   return (
     <figure className='figure'>
       <img className='photo' src={post.imageLink} alt={post.description} />
@@ -10,7 +10,7 @@ const Photo = ({ post }) => {
           <button
             className='remove-button'
             onClick={() => {
-              post.onRemovePhoto(post)
+              onRemovePhoto(post)
             }}>
             Remove
           </button>

@@ -4,7 +4,7 @@ import PhotoWall from './components/PhotoWall'
 import './App.css'
 
 const App = () => {
-  const [posts] = useState([
+  const [posts, setPosts] = useState([
     {
       id: '0',
       description: 'beautiful landscape',
@@ -26,7 +26,7 @@ const App = () => {
   ])
 
   function removePhoto(p) {
-    console.log(p.description)
+    setPosts(posts.filter((post) => post.id === p.id))
   }
 
   return (
