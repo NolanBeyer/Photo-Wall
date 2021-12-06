@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Title from './components/Title'
 import PhotoWall from './components/PhotoWall'
+import AddPhoto from './components/AddPhoto'
+import { Route } from 'react-router-dom'
 import './App.css'
 
 const App = () => {
@@ -26,13 +28,39 @@ const App = () => {
   ])
 
   function removePhoto(p) {
-    setPosts(posts.filter((post) => post.id === p.id))
+    setPosts(posts.filter((post) => post !== p))
+  }
+
+  function addPhoto(postSubmitted) {
+    setPosts(posts.concat(postSubmitted))
   }
 
   return (
     <div>
-      <Title title={'Photowall'} />
-      <PhotoWall posts={posts} onRemovePhoto={removePhoto} />
+      <Route
+        exact
+        path='/'
+        render={() => (
+          <div>
+            <Title title={'Photowall'} />
+            <PhotoWall posts={posts} onRemovePhoto={removePhoto} />
+          </div>
+        )}
+      />
+
+      <Route
+        path='/AddPhoto'
+        render={({ history }) => (
+          <div>
+            <AddPhoto
+              onAddPhoto={(addedPost) => {
+                addPhoto(addedPost)
+                history.push('/')
+              }}
+            />
+          </div>
+        )}
+      />
     </div>
   )
 }

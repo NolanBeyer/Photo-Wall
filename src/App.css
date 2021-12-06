@@ -200,7 +200,8 @@ button:focus,
   margin: 20px auto;
   display: table;
   padding: 40px;
-  background: url('https://image.flaticon.com/icons/svg/60/60740.svg');
+  background: url('https://cdn-icons-png.flaticon.com/512/60/60740.png') center
+    no-repeat;
   background-size: contain;
   border: none;
 }
